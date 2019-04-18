@@ -10,7 +10,7 @@ RUN apt -y update
 RUN apt -y install wget && apt -y install unzip && apt -y install python-pip && apt -y install git
 
 ##Download terraform binary
-RUN wget https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip && unzip terraform_0.11.3_linux_amd64.zip -d /bin/
+RUN wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip && unzip terraform_0.11.13_linux_amd64.zip -d /bin/
 
 ##Install ansible
 RUN pip install ansible==2.6.14
