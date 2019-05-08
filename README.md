@@ -7,3 +7,4 @@
 | Terraform | 11.13 |
 | Ansible | 2.6.14 |
 | Terrafom-inventory | N/A |
+| kubectl | 1.14.1 |
