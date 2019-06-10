@@ -8,3 +8,8 @@
 | Ansible | 2.6.14 |
 | Terrafom-inventory | N/A |
 | kubectl | 1.14.1 |
+
+### Plug-in
+| Application |  Type               |
+| ----------- | ------------------- |
+| Ansible     |  Vault Integration  |

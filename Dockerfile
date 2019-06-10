@@ -7,7 +7,7 @@ MAINTAINER Lorenzo Comotti
 RUN apt -y update
 
 ##Install required pakages
-RUN apt -y install wget && apt -y --fix-missing install unzip && apt -y --fix-missing install python-pip && apt -y --fix-missing install git && apt -y --fix-missing install apt-transport-https 
+RUN apt -y install wget git && apt -y --fix-missing install unzip && apt -y --fix-missing install python-pip && apt -y --fix-missing install git && apt -y --fix-missing install apt-transport-https 
 
 ##Download terraform binary
 RUN wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip && unzip terraform_0.11.13_linux_amd64.zip -d /bin/
@@ -20,6 +20,9 @@ RUN apt -y install kubectl=1.14.1-00
 
 ##Install ansible
 RUN pip install ansible==2.6.14
+
+## Enable ansible vault plugin
+RUN mkdir -p /etc/ansible/plugin && cd /etc/ansible/plugin && git clone https://github.com/jhaals/ansible-vault.git
 
 COPY terraform-inventory /bin/terraform-inventory
 
