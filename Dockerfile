@@ -22,7 +22,8 @@ RUN apt -y install kubectl=1.14.1-00
 RUN pip install ansible==2.6.14
 
 ## Enable ansible vault plugin
-RUN mkdir -p /etc/ansible/plugin && cd /etc/ansible/plugin && git clone https://github.com/jhaals/ansible-vault.git
+RUN pip install hvac
+#RUN mkdir -p /etc/ansible/plugin && cd /etc/ansible/plugin && git clone https://github.com/jhaals/ansible-vault.git
 
 COPY terraform-inventory /bin/terraform-inventory
 
