@@ -19,7 +19,7 @@ RUN wget -qO - https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key a
 RUN apt -y install kubectl=1.14.1-00
 
 ##Install ansible
-RUN pip install ansible==2.6.14
+RUN pip install ansible==2.9.6
 
 ## Enable ansible vault plugin
 RUN pip install hvac
