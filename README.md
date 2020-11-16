@@ -8,6 +8,7 @@
 | Ansible | 2.9.6 |
 | Terrafom-inventory | N/A |
 | kubectl | 1.14.1 |
+| python-consul | 1.0.1 |
 
 ### Plug-in
 | Application |  Type               |

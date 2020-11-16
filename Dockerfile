@@ -15,15 +15,8 @@ RUN wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linu
 ## add kubernetes repository
 RUN wget -qO - https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list && apt -y update 
 
-# Install kubectl
-RUN apt -y install kubectl=1.14.1-00
-
-##Install ansible
-RUN pip install ansible==2.9.6
-
-## Enable ansible vault plugin
-RUN pip install hvac
-#RUN mkdir -p /etc/ansible/plugin && cd /etc/ansible/plugin && git clone https://github.com/jhaals/ansible-vault.git
+# Install plugins
+RUN apt -y install kubectl=1.14.1-00 && pip install ansible==2.9.6 && pip install python-consul==1.0.1 && pip install hvac
 
 COPY terraform-inventory /bin/terraform-inventory
 
