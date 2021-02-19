@@ -4,7 +4,7 @@
 
 | Binary | version |
 | ------ | ------ |
-| Terraform | 11.13 |
+| Terraform | 0.14.7 |
 | Ansible | 2.9.6 |
 | Terrafom-inventory | N/A |
 | kubectl | 1.18.16 |
