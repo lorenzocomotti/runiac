@@ -7,7 +7,7 @@
 | Terraform | 11.13 |
 | Ansible | 2.9.6 |
 | Terrafom-inventory | N/A |
-| kubectl | 1.14.1 |
+| kubectl | 1.18.16 |
 | python-consul | 1.0.1 |
 
 ### Plug-in
